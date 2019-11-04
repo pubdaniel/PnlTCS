@@ -16,7 +16,7 @@ public class OpenNlp {
 	public OpenNlp() throws IOException {
 		languageModel = new LanguageDetectorModel(new File("C:\\Users\\Daniel\\git\\PnlTCS\\resources\\models\\langdetect-183.bin"));
 	}
-	
+	 
 	public void detectLanguage(String text) {
 		LanguageDetector detector = new LanguageDetectorME(languageModel);
 		Language language = detector.predictLanguage(text);
