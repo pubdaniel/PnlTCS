@@ -17,11 +17,14 @@ public class OpenNlp {
 		languageModel = new LanguageDetectorModel(new File("C:\\Users\\Daniel\\git\\PnlTCS\\resources\\models\\langdetect-183.bin"));
 	}
 	 
-	public void detectLanguage(String text) {
+	public Language detectLanguage(String text) {
 		LanguageDetector detector = new LanguageDetectorME(languageModel);
-		Language language = detector.predictLanguage(text);
-		System.out.println(language.getLang() + " predict: " + language.getConfidence());
-		
+		return detector.predictLanguage(text);
+	}
+	
+	public Language[] detectLanguages(String text) {
+		LanguageDetector detector = new LanguageDetectorME(languageModel);
+		return detector.predictLanguages(text);
 	}
 	
 	public static void main(String[] args) throws IOException {

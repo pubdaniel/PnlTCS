@@ -7,16 +7,22 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import br.senac.sc.control.QueryControl;
+import br.senac.sc.model.QueryObject;
+
 @Path("/query")
 public class Query {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response sendQuery(@QueryParam("url") String url) {
-		//control text processor => 
+	public Response sendQuery(@QueryParam("text") String text) {
+		
+		QueryControl control = new QueryControl();
+		QueryObject queryObject = control.processQuery(text);
+		//control text processor =>
 		
 		
-		return Response.ok("{ 'Query' : '"+ url+"' }").build();
+		return Response.ok(queryObject).build();
 	}
 	
 	
