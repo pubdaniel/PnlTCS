@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<languageConfiguration xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	    xsi:noNamespaceSchemaLocation="languageConfiguration.xsd">
+	    <locale>pt_BR</locale>
+	    <model type="sentenceDetector">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-sent.model</model>
+	    <model type="tokenizer">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-tok.model</model>
+	    <model type="nameFinder">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-prop.model</model>
+	    <model type="contractionFinder">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-con.model</model>
+	    <model type="posTagger">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-pos.model</model>
+	    <model type="featurizer">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-feat.model</model>
+	    <model type="chunker">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-chunk.model</model>
+	    <model type="headFinder">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-hf.model</model>
+	    <model type="shallowParser">C:\Users\Daniel\git\PnlTCS\resources\models\cogroo\pt-sp.model</model>
+	
+	    <pipe>
+	        <analyzer>sentenceDetector</analyzer>
+	        <analyzer>tokenizer</analyzer>
+	        <analyzer>nameFinder</analyzer>
+	        <analyzer>contractionFinder</analyzer>
+	        <analyzer>posTagger</analyzer>
+	        <analyzer>featurizer</analyzer>
+	        <analyzer>lemmatizer</analyzer>
+	        <analyzer>chunker</analyzer>
+	        <analyzer>headFinder</analyzer>
+	        <analyzer>shallowParser</analyzer>
+	    </pipe>
+	</languageConfiguration> 

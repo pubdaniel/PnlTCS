@@ -1,5 +1,7 @@
 package br.senac.sc.service;
 
+import java.io.IOException;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -18,11 +20,15 @@ public class Query {
 	public Response sendQuery(@QueryParam("text") String text) {
 		
 		QueryControl control = new QueryControl();
-		QueryObject queryObject = control.processQuery(text);
-		//control text processor =>
+		QueryObject queryObject;
+		try {
+			queryObject = control.processQuery(text);
+			return Response.ok(queryObject).build();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return Response.status(Response.Status.BAD_REQUEST).entity(e).build();
+		}
 		
-		
-		return Response.ok(queryObject).build();
 	}
 	
 	
