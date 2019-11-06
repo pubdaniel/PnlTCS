@@ -28,7 +28,7 @@ public class QueryControl {
 		
 		
 //		Cogroo cogroo = new Cogroo();
-//		queryObject.setSentences(cogroo.extractSentences(text)); // Ver com professor como bildar projeto cogroo no projeto e usar RESOURCES (models)
+//		System.out.println(cogroo.extractSentences(text)); // Ver com professor como bildar projeto cogroo no projeto e usar RESOURCES (models)
 		
 		//=>
 		//language detector

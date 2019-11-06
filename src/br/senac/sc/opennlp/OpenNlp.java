@@ -20,8 +20,8 @@ public class OpenNlp {
 
 	
 	public OpenNlp() throws IOException {
-		languageModel = new LanguageDetectorModel(new File("C:\\Users\\Daniel\\git\\PnlTCS\\resources\\models\\langdetect-183.bin"));
-		sentenceModel = new SentenceModel(new File("C:\\Users\\Daniel\\git\\PnlTCS\\resources\\models\\pt-sent.bin"));
+		languageModel = new LanguageDetectorModel(new File("resources\\models\\langdetect-183.bin"));
+		sentenceModel = new SentenceModel(new File("resources\\models\\pt-sent.bin"));
 	}
 	
 	public Language detectLanguage(String text) {

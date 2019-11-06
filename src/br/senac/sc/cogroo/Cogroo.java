@@ -1,5 +1,6 @@
 package br.senac.sc.cogroo;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,8 +23,14 @@ public class Cogroo {
 	Analyzer cogroo;
 	
 	public Cogroo() throws IOException {
+//		InputStream in = new FileInputStream("C:\\Users\\Aluno\\git\\PnlTCS\\resources\\models_pt_BR.xml");
+//	    ComponentFactory factory = ComponentFactory.create(in);
+//	    cogroo = factory.createPipe();
+		
 	    ComponentFactory factory = ComponentFactory.create(new Locale("pt", "BR"));
 	    cogroo = factory.createPipe();
+
+//	    in.close();
 	}
 	
 	public List<Sentence> extractSentences(String text) {

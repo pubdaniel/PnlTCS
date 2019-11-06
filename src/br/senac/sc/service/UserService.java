@@ -1,5 +1,7 @@
 package br.senac.sc.service;
 
+import java.io.File;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -52,6 +54,9 @@ public class UserService {
 		user.setEmail(username + "@gmail.com");
 		user.setPassword(password);
 		user.setPhone("48 99999999");
+		
+		String path = new File("teste.txt").getAbsolutePath();
+
 
 		Permission permission = new Permission();
 		permission.setId(1L);
@@ -62,5 +67,6 @@ public class UserService {
 
 		return Response.ok(user).build();
 	}
+	
 
 }
